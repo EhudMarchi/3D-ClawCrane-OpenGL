@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D118B639-8BF0-4AB3-B64D-254EE7731890}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>myOpenGL</RootNamespace>
+    <AssemblyName>myOpenGL</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cOGL.cs" />
+    <Compile Include="Utills\DrawingUtills.cs" />
+    <Compile Include="AracdeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracdeForm.Designer.cs">
+      <DependentUpon>AracdeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utills\GLU.cs" />
+    <Compile Include="Utills\GLUT.cs" />
+    <Compile Include="Objects\LightSource.cs" />
+    <Compile Include="Utills\ObjectReader.cs" />
+    <Compile Include="Objects\Claw.cs" />
+    <Compile Include="Objects\ClawMachine.cs" />
+    <Compile Include="Objects\Toy.cs" />
+    <Compile Include="Objects\SideMachine.cs" />
+    <Compile Include="Objects\ToyCar.cs" />
+    <Compile Include="Objects\TeddyBear.cs" />
+    <Compile Include="Utills\OpenGL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AracdeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AracdeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\LightSource.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Objects\SkyBox.cs" />
+    <Compile Include="Utills\ShadowUtills.cs" />
+    <Compile Include="Utills\TextureUtills.cs" />
+    <Compile Include="Utills\WGL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ArrowUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ArrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ArrowDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ArrowLeft.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
